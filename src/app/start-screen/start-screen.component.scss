@@ -1,0 +1,28 @@
+.startscreen{
+    background-color:rgb(128,128,128);
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height:100vh;
+    }
+}
+
+.label-cont{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:100px;
+    img{
+        width:400px;
+        height: auto;
+        cursor: pointer;
+        &:hover{
+            filter:brightness(1.3)
+        }
+    }
+}
