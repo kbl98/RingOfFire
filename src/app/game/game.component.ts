@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { DialogPlayerComponent } from '../dialog-player/dialog-player.component';
 
 @Component({
   selector: 'app-game',
@@ -13,7 +15,7 @@ cardAnimation= false;
 
 
 
-constructor(){
+constructor(public dialog: MatDialog){
   //this.game=new Game;
 }
 
@@ -28,9 +30,28 @@ newGame(){
 }
 
   takeCard(){
+  if(!this.cardAnimation)
   this.current_card=this.game.stack.pop();
+  this.game.currentPlayer++;
+  this.game.currentPlayer=this.game.currentPlayer%this.game.players.length;
   this.cardAnimation=true;
+  setTimeout(()=>{
 
-console.log(this.current_card)
+ 
+  this.game.playedCards.push(this.current_card);
+  console.log(this.game.playedCards)
+  this.cardAnimation=false;
+},1000)
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogPlayerComponent);
+
+    dialogRef.afterClosed().subscribe(name => {
+      if(name && name.length>0)
+      this.game.players.push(name)
+    });
   }
 }
+  
+
