@@ -30,7 +30,7 @@ newGame(){
 }
 
   takeCard(){
-  if(!this.cardAnimation)
+  if(!this.cardAnimation && this.game.stack.length>0){
   this.current_card=this.game.stack.pop();
   this.game.currentPlayer++;
   this.game.currentPlayer=this.game.currentPlayer%this.game.players.length;
@@ -43,7 +43,7 @@ newGame(){
   this.cardAnimation=false;
 },1000)
   }
-
+  }
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogPlayerComponent);
 

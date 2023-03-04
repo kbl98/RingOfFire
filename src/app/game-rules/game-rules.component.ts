@@ -16,9 +16,9 @@ export class GameRulesComponent implements OnInit,OnChanges{
     { title: 'Chicks', description: 'All girls drink.' },
     { title: 'Heaven', description: 'Put your hands up! The last player drinks!' },
     { title: 'Mate', description: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
-    { title: 'Thumbmaster', description: '' },
+    { title: 'Thumbmaster', description: 'Both thumbs in the air. Last one drinks.' },
     { title: 'Men', description: 'All men drink.' },
-    { title: 'Quizmaster', description: '' },
+    { title: 'Quizmaster', description: 'Ask a question to one player. If answer is wrong, this player has to drink.' },
     { title: 'Never have i ever...', description: 'Say something you nnever did. Everyone who did it has to drink.' },
     { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
   ];
