@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kbl-ringoffire": {
+      "hosting": {
+        "ringoffire": [
+          "kbl-ringoffire"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kbl-ringoffire"
+  }
+}

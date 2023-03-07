@@ -34,4 +34,14 @@ constructor(){
   
     return array;
   }
+
+  public toJSON(){
+    return {
+      players:this.players,
+      stack:this.stack,
+      playedCards:this.playedCards,
+      currentPlayer:this.currentPlayer
+    
+  }
+}
 }
