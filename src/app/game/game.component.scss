@@ -43,6 +43,7 @@
 .player-position{
     position:absolute;
     right:0;
+    z-index: 1;
 }
 
 .add-button{
@@ -50,6 +51,11 @@
     right:32px;
     bottom: 32px;
     //background-color: rgb(162, 103, 162);
+    z-index: 3;
+    @media screen and (max-width:960px) {
+        bottom: 5px;
+    }
+
 }
 
 .gamerules-cont{
@@ -57,7 +63,30 @@
     bottom:32px;
     right: 120px;
     left:120px;
+    
+
+    @media screen and (max-width:960px) {
+        bottom:0;
+        right: 0;
+        left:0;
+    }
 }
+
+.scroll-cont{
+position:absolute;
+left:0;
+z-index: 1;
+display:flex;
+overflow-x: auto;
+width: 100vw;
+overflow-y: hidden;
+}
+
+.preload{
+    opacity: 0;
+    z-index:-999999;
+}
+
 
 @keyframes animatePickCard{
     from{

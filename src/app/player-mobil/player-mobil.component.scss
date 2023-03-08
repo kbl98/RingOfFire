@@ -1,0 +1,38 @@
+.player-cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:60px;
+    height:80px;
+    background-color: rgba(100, 100, 100,0.7);
+    border-bottom-left-radius:50px;
+border-bottom-right-radius:50px;
+overflow: hidden;
+margin-right:5px;
+
+
+
+    
+        img{
+            width:40px;
+            height:auto;
+            object-fit: cover;
+            border-radius: 50%;
+            &:hover{
+                cursor: pointer;
+                filter: brightness(1,2);
+            }
+        }
+        span{
+            font-size: 14px;
+            margin-bottom:10px;
+            
+        }
+    }
+    
+    .active-player{
+        background-color:rgb(89, 244, 107); ;
+    }
+    
+    

@@ -9,3 +9,16 @@ body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.hide-mobil{
+    @media screen and (max-width:720px) {
+        display:none;
+    }
+}
+
+.hide-fullscreen{
+    @media screen and (min-width:721px) {
+        display: none !important;
+    }
+}

@@ -1,21 +1,22 @@
-.startscreen{
-    background-color:rgb(128,128,128);
-    height:100vh;
+.endscreen{
+    background-color: rgb(155, 27, 27);
+    position: absolute;
+    z-index: -10;
     width:100vw;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (max-width:960px) {
-        overflow: hidden;
-    }
-
+    height: 100vh;
     img{
+        width:100vw;
         height:100vh;
+        object-fit: contain;
+        z-index:-1;
+        position: absolute;
+        top:0;
+        left:0;
     }
 }
 
 .label-cont{
+    z-index: 5;
     width:100%;
     display: flex;
     justify-content: center;
@@ -25,10 +26,6 @@
         width:400px;
         height: auto;
         cursor: pointer;
-
-        @media screen and (max-width:960px) {
-            width:400px;
-        }
 
         @media screen and (max-width:500px) {
             width:250px;

@@ -25,6 +25,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { EndscreenComponent } from './endscreen/endscreen.component';
+import { PlayerMobilComponent } from './player-mobil/player-mobil.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 
@@ -41,6 +44,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     PlayerComponent,
     DialogPlayerComponent,
     GameRulesComponent,
+    EndscreenComponent,
+    PlayerMobilComponent,
+    EditPlayerComponent,
    
   ],
   imports: [

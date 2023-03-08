@@ -1,5 +1,7 @@
-<app-player *ngFor="let player of game.players;let i=index"    class="player-position" [ngStyle]="{'top.px': 100 + 150 * i}" [name]="player" [playerActive]="i==game.currentPlayer"></app-player>
-
+<app-player (click)="editPlayer(i)"  *ngFor="let player of game.players;let i=index"    class="player-position hide-mobil" [ngStyle]="{'top.px': 20 + 70 * i}" [image]="game.playerImages[i]" [name]="player" [playerActive]="i==game.currentPlayer"></app-player>
+<div class="scroll-cont  hide-fullscreen">
+<app-player-mobil (click)="editPlayer(i)"  *ngFor="let player of game.players;let i=index"  [image]="game.playerImages[i]" [name]="player" [playerActive]="i==game.currentPlayer"></app-player-mobil>
+</div>
 <div class="field">
     <div class="card-stack">
         <!--stack draw for coverd cards-->
@@ -8,7 +10,7 @@
          <!--stack played cards-->
         <img class="picked-cards" *ngFor="let card of game.playedCards"  style="right:25px" src="assets/img/{{card}}.png">
          <!--stack take current cards-->
-        <img  (click)="takeCard()"   *ngIf="cardAnimation"  class="pickcard" style="right:25px" src="assets/img/{{current_card}}.png">
+        <img  (click)="takeCard()"   *ngIf="game.cardAnimation"  class="pickcard" style="right:25px" src="assets/img/{{game.current_card}}.png">
       
     </div>
 </div>
@@ -17,4 +19,6 @@
     <mat-icon>add</mat-icon>
   </button>
 
-  <app-game-rules class="gamerules-cont"  [card]="current_card"  ></app-game-rules>
+  <img class="preload" src="assets/img/{{game.stack[game.stack.length-1]}}.png">
+
+  <app-game-rules class="gamerules-cont"  [card]="game.current_card"  ></app-game-rules>

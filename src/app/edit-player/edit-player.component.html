@@ -1,0 +1,6 @@
+<img class="profil-select" [mat-dialog-close]="pic"    *ngFor="let pic of profil_pics; let i=index" src="assets/img/{{pic}}">
+
+<div mat-dialog-actions>
+    <button mat-button (click)="NoClick()" >No thank you</button>
+    <button mat-button  [mat-dialog-close]="'delete'" >Delete</button>
+</div>
