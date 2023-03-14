@@ -5,13 +5,13 @@ import { StartScreenComponent } from './start-screen/start-screen.component';
 import { EndscreenComponent } from './endscreen/endscreen.component';
 
 const routes: Routes = [
-  { path: '', component: StartScreenComponent},
-  { path: 'game/:id', component: GameComponent},
-  { path: 'endscreen', component: EndscreenComponent}
+  { path: '', component: StartScreenComponent },
+  { path: 'game/:id', component: GameComponent },
+  { path: 'endscreen', component: EndscreenComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,24 +1,28 @@
-body{
-    top:0;
-    margin:0;
-    left:0;
-    right:0;
-    width:100vw;
-    height:100vh;
+body {
+  top: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-.hide-mobil{
-    @media screen and (max-width:720px) {
-        display:none;
-    }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.hide-fullscreen{
-    @media screen and (min-width:721px) {
-        display: none !important;
-    }
+.hide-mobil {
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
+.hide-fullscreen {
+  @media screen and (min-width: 721px) {
+    display: none !important;
+  }
 }

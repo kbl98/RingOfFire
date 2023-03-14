@@ -1,106 +1,100 @@
-.field{
-    height:100vh;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://dr-katja-becker-lindhorst.developerakademie.net/ringoffire/assets/img/board.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.field {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://dr-katja-becker-lindhorst.developerakademie.net/ringoffire/assets/img/board.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card-stack{
-    position: relative;
-    img{position: absolute;
-        width:100px;
-        height:auto
-    }
-}
-
-.top-card{
-    cursor:pointer;
-    transition: all 125ms ease-in-out;
-    &:hover{
-        transform: scale(1.1)  translateY(-10px);
-       
-
-    }
-}
-
-.pickcard{
-    animation: animatePickCard 1.0s ease-in-out;
-    transform: scale(1.3) translateY(-180px) translateX(120px) rotate(-10deg);
-   
-
-}
-
-.picked-cards{
+.card-stack {
+  position: relative;
+  img {
     position: absolute;
+    width: 100px;
+    height: auto;
+  }
+}
+
+.top-card {
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+  &:hover {
+    transform: scale(1.1) translateY(-10px);
+  }
+}
+
+.pickcard {
+  animation: animatePickCard 1s ease-in-out;
+  transform: scale(1.3) translateY(-180px) translateX(120px) rotate(-10deg);
+}
+
+.picked-cards {
+  position: absolute;
+  transform: scale(1.3) translateY(-180px) translateX(120px) rotate(-10deg);
+}
+
+.player-position {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.add-button {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  //background-color: rgb(162, 103, 162);
+  z-index: 3;
+  @media screen and (max-width: 960px) {
+    bottom: 5px;
+  }
+}
+
+.gamerules-cont {
+  position: absolute;
+  bottom: 32px;
+  right: 120px;
+  left: 120px;
+
+  @media screen and (max-width: 960px) {
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.scroll-cont {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.preload {
+  opacity: 0;
+  z-index: -999999;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes animatePickCard {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.7);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
     transform: scale(1.3) translateY(-180px) translateX(120px) rotate(-10deg);
-
-}
-
-.player-position{
-    position:absolute;
-    right:0;
-    z-index: 1;
-}
-
-.add-button{
-    position:absolute;
-    right:32px;
-    bottom: 32px;
-    //background-color: rgb(162, 103, 162);
-    z-index: 3;
-    @media screen and (max-width:960px) {
-        bottom: 5px;
-    }
-
-}
-
-.gamerules-cont{
-    position:absolute;
-    bottom:32px;
-    right: 120px;
-    left:120px;
-    
-
-    @media screen and (max-width:960px) {
-        bottom:0;
-        right: 0;
-        left:0;
-    }
-}
-
-.scroll-cont{
-position:absolute;
-left:0;
-z-index: 1;
-display:flex;
-overflow-x: auto;
-width: 100vw;
-overflow-y: hidden;
-}
-
-.preload{
-    opacity: 0;
-    z-index:-999999;
-}
-
-
-@keyframes animatePickCard{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.7);
-    }
-    50%{
-        transform: scale(1.5);
-    }
-
-    100%{
-        transform: scale(1.3) translateY(-180px) translateX(120px) rotate(-10deg);
-    }
-    
+  }
 }
